@@ -16,7 +16,7 @@ puts "#{player1.name} jogará usando #{player1.value_x}\n\n"
 puts 'Jogador 2 digite seu nome'
 player2 = Player.new
 player2.name = gets.chomp.capitalize
-puts "#{player2.name} jogará usando #{player2.value_x}\n\n"
+puts "#{player2.name} jogará usando #{player2.value_o}\n\n"
 
 gameboard = Board.new(player1, player2)
 puts gameboard.show_board
@@ -31,15 +31,15 @@ while play.won? == false && turns < 10
     puts "#{player2.name} escolha um número de 1 a 9"
   end
 
-  chosen = gets.chomp.to_i
+  num = gets.chomp.to_i
 
-  while play.valid_move?(chosen) == false
+  while play.valid_move?(num) == false
     puts play.invalid
-    chosen = gets.chomp.to_i
-    play.valid_move?(chosen)
+    num = gets.chomp.to_i
+    play.valid_move?(num)
   end
 
-  puts play.move(chosen)
+  puts play.move(num)
 
   puts play.winner if play.won?
   turns += 1
