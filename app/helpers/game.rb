@@ -11,7 +11,7 @@ class Game < Board
 
   def move(num)
     count(num)
-    swap(num) if valid_move?(num)
+    swap_players(num) if valid_move?(num)
     show_board
   end
 

@@ -25,7 +25,7 @@ class Board < Player
     "
   end
 
-  def swap_players
+  def swap_players(num)
     # Define que quem inicia e o player com o 0
     if @counts.odd?
       player1.value_x
@@ -40,6 +40,7 @@ class Board < Player
       return true if win_comb.all? { |x| x == '0' }
       return true if win_comb.all? { |x| x == 'X' }
     end
+    false
   end
 
   def winner
