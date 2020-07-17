@@ -34,7 +34,7 @@ class Board < Player
     end
   end
 
-  def won
+  def won?
     @wins.each do |result|
       win_comb = [board[result[0]], board[result[1]], board[result[2]]]
       return true if win_comb.all? { |x| x == '0' }
