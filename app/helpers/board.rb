@@ -27,11 +27,11 @@ class Board < Player
 
   def swap_players(num)
     # Define que quem inicia e o player com o 0
-    if @counts.odd?
-      player1.value_x
-    else
-      player2.value_o
-    end
+    board[num - 1] = if @counts.odd?
+                       player1.value_x
+                     else
+                       player2.value_o
+                     end
   end
 
   def won?
