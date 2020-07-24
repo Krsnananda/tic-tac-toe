@@ -2,9 +2,9 @@
 
 # script que inicia o jogo
 
-require_relative '../helpers/board.rb'
-require_relative '../helpers/player.rb'
-require_relative '../helpers/game.rb'
+require_relative '../lib/board.rb'
+require_relative '../lib/player.rb'
+require_relative '../lib/game.rb'
 
 puts 'Bem-vindo ao Jogo da Velha! (Welcome to Tic Tac Toe!)'
 
